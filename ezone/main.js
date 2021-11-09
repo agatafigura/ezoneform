@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import '/style.scss'
-=======
 import "/style.scss";
 document.querySelector("#signup").addEventListener("click", function () {
   location.href = "form.html";
 });
->>>>>>> 63e6c03106b7c866ddf4ef10d1d27f7d3d19b139
+
 //validate repeated password
 
 var passwordinput = document.getElementById("password"),
