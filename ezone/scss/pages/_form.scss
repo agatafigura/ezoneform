@@ -51,7 +51,7 @@ fieldset {
     column-gap: 1rem;
 }
 
-#password-eye {
+.password-eye {
     display: flex;
 }
 
@@ -61,6 +61,7 @@ i {
     font-size: 1em;
     z-index: 1;
     align-self: center;
+    cursor: pointer;
 }
 
 label {

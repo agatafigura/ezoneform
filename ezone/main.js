@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import "/style.scss";
 document.querySelector("#signup").addEventListener("click", function () {
   location.href = "form.html";
 });
 
+=======
+import '/style.scss'
+>>>>>>> 8710790b676f0e9a1981dbe5b3342a9301a7340d
 //validate repeated password
 
 var passwordinput = document.getElementById("password"),
@@ -94,10 +98,34 @@ function showError5() {
 
 //eye toggle
 
-const eyeToggle = document.querySelector("i");
+const eyeToggle = document.querySelector("#eye");
 
-eyeToggle.addEventListener("click", function (e) {
-  const type = password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
-  this.classList.toggle("fa-eye-slash");
-P});
+eyeToggle.addEventListener("click", toggleEye);
+
+function toggleEye() {
+    if (eyeToggle.classList.contains("fa-eye-slash")) {
+        eyeToggle.classList.remove("fa-eye-slash");
+        eyeToggle.classList.add("fa-eye");
+        document.querySelector("#password").setAttribute("type", "text");
+    } else {
+        eyeToggle.classList.remove("fa-eye");
+        eyeToggle.classList.add("fa-eye-slash");
+        document.querySelector("#password").setAttribute("type", "password");
+    }
+}
+
+const eyeToggle2 = document.querySelector("#eye2");
+
+eyeToggle2.addEventListener("click", toggleEye2);
+
+function toggleEye2() {
+    if (eyeToggle2.classList.contains("fa-eye-slash")) {
+        eyeToggle2.classList.remove("fa-eye-slash");
+        eyeToggle2.classList.add("fa-eye");
+        document.querySelector("#repeat-password").setAttribute("type", "text");
+    } else {
+        eyeToggle2.classList.remove("fa-eye");
+        eyeToggle2.classList.add("fa-eye-slash");
+        document.querySelector("#repeat-password").setAttribute("type", "password");
+    }
+}
