@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 @use "scss/core/colors";
 @use "scss/pages/home";
 * {
   box-sizing: border-box;
   margin: 0;
 }
+=======
+@use '/scss/core/colors';
+@use '/scss/core/typography';
+@use '/scss/pages/form';
+@use '/scss/pages/home';
+
+>>>>>>> 22cb56c8ddb74be7a0894c99793cc809ecb0005a
