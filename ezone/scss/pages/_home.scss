@@ -1,0 +1,5 @@
+@use "../core/colors";
+
+body { 
+    background-color: colors.$bgcolor;
+}
