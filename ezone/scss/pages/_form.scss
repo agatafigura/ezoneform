@@ -1,0 +1,13 @@
+@use '../core/typography';
+@use '../core/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: typography.$mainfont;
+    color: colors.$maincolor;
+}
