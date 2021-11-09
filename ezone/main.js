@@ -1,5 +1,4 @@
 import '/style.scss'
-
 //validate repeated password
 
 var passwordinput = document.getElementById("password")
