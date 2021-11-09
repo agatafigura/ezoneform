@@ -4,10 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Sign up</title>
 </head>
 <body>
-    <h1>TELL US ABOUT YOURSELF</h1>
+    <header>
+        <img src="img/nav.png">
+    </header>
+    <main>
+        <h1>TELL US ABOUT YOURSELF</h1>
+        <div id="grid">
+            <div id="text">
+                <h2>PERSONAL INFORMATION</h2>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nibh vel dui sollicitudin feugiat. Vivamus sodales tristique congue. Praesent sed tempus dolor, sit amet varius quam. Vivamus nec nunc urna. Nam tristique massa velit, vitae luctus nisl commodo sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+            <form id="form-section1">
+                <fieldset>
+                    <div class="label-input">
+                        <label>Full name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="2">
+                    </div>
+                    <span class="error1">Your name should be at least 2 characters long</span>
+                </fieldset>
+                <fieldset>
+                    <div class="label-input">
+                        <label>E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@mail.com" required>
+                    </div>
+                    <span class="error2">E-mail is not valid</span>
+                </fieldset>
+                <fieldset>
+                    <div class="label-input">
+                        <label>Gamertag</label>
+                        <input type="text" id="gamertag" name="gamertag" placeholder="@johndoe" required minlength="6">
+                    </div>
+                    <span class="error3">Your gamertag should be at least 5 characters long</span>
+                </fieldset>
+                <fieldset>
+                    <div class="label-input">
+                        <div id="password-label">
+                            <label>Password</label>
+                            <span class="comment">At least 8 characters</span>
+                        </div>
+                        <div id="password-eye">
+                            <input type="password" id="password" name="password" placeholder="********" required pattern=".{8,}">
+                            <i class="fa fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    <span class="error4">Password is not valid</span>
+                </fieldset>
+                <fieldset>
+                    <div class="label-input">
+                        <label>Repeat password</label>
+                        <input type="password" id="repeat-password" name="repeat-password" placeholder="********" required>
+                    </div>
+                    <span class="error5">Passwords don't match</span>
+                </fieldset>
+                <fieldset>
+                    <div class="label-input">
+                        <label>Profile picture</label>
+                        <input type="file" id="upload" name="upload" accept="image/png, image/jpeg"> 
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <hr>
+    </main>
     <script type="module" src="/main.js"></script>
 </body>
 </html>

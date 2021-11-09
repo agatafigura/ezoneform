@@ -1,0 +1,176 @@
+@use '../core/typography';
+@use '../core/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: typography.$h1-font;
+    color: colors.$maincolor;
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: typography.$h1-font;
+    color: colors.$maincolor;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+}
+
+.description {
+    font-family: typography.$p-font;
+    color: white;
+    margin: 2rem;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    margin: 4rem;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    width: 32vw;
+    margin-bottom: 1.2rem;
+    height: 2.2em;
+}
+
+.label-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+#password-eye {
+    display: flex;
+}
+
+i {
+    color: colors.$maincolor;
+    margin-left: -2em;
+    font-size: 1em;
+    z-index: 1;
+    align-self: center;
+}
+
+label {
+    font-family: typography.$h2-font;
+    color: colors.$maincolor;
+    font-size: 1.25rem;
+    display: block;
+    width: 12vw;
+    text-align: right;
+}
+
+.comment {
+    font-family: typography.$p-font;
+    color: gray;
+    font-size: 0.8rem;
+    display: block;
+    width: 12vw;
+    text-align: right;
+}
+
+input {
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    width: 20rem;
+    height: 2.2rem;
+    font-family: typography.$p-font;
+    padding-left: 0.4rem;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+input:is(:focus) {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 1em;
+    outline: none;
+    color: white;
+}
+
+input::placeholder {
+    font-family: typography.$p-font;
+    color: rgb(255,255,255, 0.4);
+}
+  
+input[type=file]::file-selector-button {
+    border: 2px solid colors.$maincolor;
+    border-radius: 1em;
+    background-color: colors.$bgcolor;
+    transition: 1s;
+    color: colors.$maincolor;
+    font-family: typography.$h1-font;
+    padding: 0.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-transform: uppercase;
+}
+  
+input[type=file]::file-selector-button:hover {
+    background-color: colors.$maincolor;
+    border: 2px solid colors.$maincolor;
+    color: colors.$bgcolor;
+  }
+  
+input[type=file]:focus {
+      border: none;
+}
+
+input:not(:focus, :placeholder-shown):invalid {
+    border: 2px solid red;
+    border-radius: 1em;
+    animation: shake 0.125s 2 backwards;
+}
+
+@keyframes shake {
+    25% {
+      transform: translateX(-6px);
+    }
+    75% {
+      transform: translateX(6px);
+    }
+  }
+
+input[type=file]:not(:focus, :placeholder-shown):invalid {
+    border: none;
+    animation: none;
+}
+
+.error1, .error2, .error3, .error4, .error5 {
+    visibility: hidden;
+    opacity: 0;
+    color: red;
+    font-family: typography.$p-font;
+    font-size: 0.7em;
+    text-align: end;
+    transition: opacity 0.3s;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+hr {
+    color: colors.$maincolor;
+    margin-bottom: 5vw;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    opacity: 50%;
+}
