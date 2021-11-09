@@ -8,6 +8,39 @@
 }
 
 h1 {
-    font-family: typography.$mainfont;
+    font-family: typography.$h1-font;
     color: colors.$maincolor;
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: typography.$h1-font;
+    color: colors.$maincolor;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+}
+
+#text {
+    margin-top: 4rem;
+}
+
+.description {
+    font-family: typography.$p-font;
+    color: white;
+    margin: 2rem;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+#form-section1 {
+    width: 40vw;
+    height: 20vh;
+    background-color: red;
+    margin: 4rem;
 }
