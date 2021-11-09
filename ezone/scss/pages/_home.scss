@@ -1,0 +1,8 @@
+@use "../core/colors";
+@use "../core/typography";
+body {
+  background-image: url("/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: colors.$bgcolor;
+}
