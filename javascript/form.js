@@ -231,11 +231,13 @@ submitButton.addEventListener("click", showPopUp)
 function showPopUp() {
   document.querySelector("#wrapper").classList.remove("hidden");
   document.querySelector("main").classList.add("hidden");
+  const name = document.querySelector(".name");
+  const nameValue = document.querySelector("#fullname").value;
+  name.innerHTML = nameValue;
+  console.log(nameValue);
 }
 
-const name = document.querySelector(".name");
-const nameValue = document.querySelector("#fullname").value;
 
-console.log(nameValue);
 
-name.innerHTML = nameValue;
+
+
