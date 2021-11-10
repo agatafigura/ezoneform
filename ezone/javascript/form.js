@@ -1,6 +1,6 @@
 "use strict;";
 
-import data from "./data.json";
+import data from "../data.json";
 console.log(data);
 import "/style.scss";
 
@@ -221,3 +221,5 @@ document.querySelectorAll("option").forEach((option) => {
     }
   });
 });
+
+app.use("/static", express.static('./static/'));
