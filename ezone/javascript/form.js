@@ -2,7 +2,7 @@
 
 import data from "../data.json";
 console.log(data);
-import "/style.scss";
+import "../style.scss"
 
 
 // gotoForm();
