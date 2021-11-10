@@ -145,7 +145,7 @@ array.forEach((element) => {
  list.firstElementChild.setAttribute("disabled", true);
 
 });
-
+setTimeout(()=>{
 document.querySelectorAll("option").forEach((option) => {
   option.addEventListener("click", (e) => {
     if (data.games.includes(e.target.value)) {
@@ -160,7 +160,7 @@ document.querySelectorAll("option").forEach((option) => {
     }
   });
 });
-
+},500);
 
 const list2 = document.querySelector("#mySelect2");
 const array2 = data.types;
