@@ -331,6 +331,7 @@ fieldset {
 #text {
   grid-column-start: 1;
   grid-row-start: 1;
+  height: 20vw;
 }
 #text2 {
   grid-column-start: 1;
@@ -340,7 +341,6 @@ fieldset {
 #text3 {
   grid-column-start: 1;
   grid-row-start: 3;
-  //   padding-top: 5vw;
 }
 
 .line2 {
