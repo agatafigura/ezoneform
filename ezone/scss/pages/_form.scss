@@ -174,3 +174,70 @@ hr {
     margin-right: 2.5vw;
     opacity: 50%;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 780px) {
+  
+    body {
+        overflow-x: hidden;
+    }
+
+    #grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        margin: 0;
+        padding: 1em;
+    }
+
+    header img {
+        width: 100vw;
+    }
+
+    #text {
+        margin-top: 3em;
+        text-align: left;
+    }
+
+    h2 {
+        margin-left: 0;
+    }
+
+    .description {
+        margin-left: 0;
+        font-size: smaller;
+        width: 90vw;;
+    }
+
+    .label-input {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0.1em;
+        justify-content: center;
+    }
+
+    label {
+        font-size: smaller;
+        width: 100vw;
+        text-align: left;
+        margin-left: 0.5em;
+    }
+
+    .comment {
+        font-size: 0.6em;
+        width: 100vw;
+        text-align: left;
+        margin-left: 0.5em;
+    }
+
+    fieldset {
+        margin-bottom: 2em;
+        height: 3em;
+    }
+
+    .error1, .error2, .error3, .error4, .error5 {
+        text-align: left;
+    }
+
+    i {
+        margin-left: -4vw;
+    }
+}
