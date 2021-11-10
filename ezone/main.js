@@ -6,7 +6,7 @@ document.querySelector(".goform").addEventListener("click", function () {
 });
 
 // putting json data in data list options
-const selected = [];
+// const selected = [];
 console.log(selected);
 const list = document.querySelector("#gamelist");
 const array = data.games;
@@ -16,10 +16,10 @@ array.forEach((element) => {
   let options = document.createElement("option");
   list.appendChild(options);
   options.setAttribute("value", `${element}`);
-  console.log(element);
-  if (selected.includes(`button.value="${element}"`)) {
-    console.log(`${element} is already in the array`);
-  }
+  // console.log(element);
+  // if (selected.includes(`button.value="${element}"`)) {
+  //   console.log(`${element} is already in the array`);
+  // }
 });
 
 document.querySelector("input").addEventListener("input", (e) => {
@@ -33,7 +33,7 @@ document.querySelector("input").addEventListener("input", (e) => {
 
     selected.push(b);
   } else {
-    console.log("nu e in lista");
+    console.log("not in the list");
   }
   console.log(e);
 });
