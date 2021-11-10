@@ -406,3 +406,7 @@ textarea::placeholder {
   color: colors.$bgcolor;
   border-color: colors.$btnhover;
 }
+
+.hidden {
+  visibility: hidden;
+}

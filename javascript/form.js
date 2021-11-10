@@ -221,3 +221,11 @@ list3.querySelectorAll("option").forEach((option) => {
     }
   });
 });
+
+const submitButton = document.querySelector(".submit");
+
+submitButton.addEventListener("click", showPopUp)
+
+function showPopUp() {
+  document.querySelector("#wrapper").classList.remove("hidden");
+}
