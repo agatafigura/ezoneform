@@ -221,5 +221,3 @@ document.querySelectorAll("option").forEach((option) => {
     }
   });
 });
-
-app.use("/static", express.static('./static/'));
