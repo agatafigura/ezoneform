@@ -222,6 +222,8 @@ list3.querySelectorAll("option").forEach((option) => {
   });
 });
 
+//popUp
+
 const submitButton = document.querySelector(".submit");
 
 submitButton.addEventListener("click", showPopUp)
