@@ -146,7 +146,7 @@ array.forEach((element) => {
 
 });
 setTimeout(()=>{
-document.querySelectorAll("option").forEach((option) => {
+list.querySelectorAll("option").forEach((option) => {
   option.addEventListener("click", (e) => {
     if (data.games.includes(e.target.value)) {
       e.target.classList.add("check");
@@ -176,7 +176,7 @@ array2.forEach((element) => {
 
 });
 
-document.querySelectorAll("option").forEach((option) => {
+list2.querySelectorAll("option").forEach((option) => {
   option.addEventListener("click", (e) => {
     if (data.types.includes(e.target.value)) {
       e.target.classList.add("check");
@@ -207,7 +207,7 @@ array3.forEach((element) => {
 
 });
 
-document.querySelectorAll("option").forEach((option) => {
+list3.querySelectorAll("option").forEach((option) => {
   option.addEventListener("click", (e) => {
     if (data.areas.includes(e.target.value)) {
       e.target.classList.add("check");
