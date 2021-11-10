@@ -1,0 +1,25 @@
+@use "../core/typography";
+@use "../core/colors";
+#goform {
+  font-family: typography.$h1-font;
+  color: colors.$btninit;
+  font-size: 1.5vw;
+  border-style: solid;
+  background: transparent;
+  border-color: colors.$btninit;
+  border-radius: 2rem;
+  padding: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  cursor: pointer;
+  position: absolute;
+  top: 40vw;
+  left: 45vw;
+
+  transition: all 0.3s ease-in;
+}
+#goform:hover {
+  background-color: colors.$btnhover;
+  color: colors.$bgcolor;
+  border-color: colors.$btnhover;
+}

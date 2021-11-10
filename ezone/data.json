@@ -1,5 +1,6 @@
 {
    "types":[
+      "Select an option",
       "FPS",
       "MMORPG",
       "Sports",
@@ -16,6 +17,7 @@
       "Platform"
    ],
    "games":[
+      "Select an option",
       "CS:GO",
       "Tekken",
       "FIFA",
@@ -39,6 +41,7 @@
       "Minecraft"
    ],
    "areas":[
+      "Select an option",
       "Hand/eye coordination",
       "Reaction time",
       "Hearing",

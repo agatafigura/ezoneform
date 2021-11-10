@@ -1,177 +1,408 @@
-@use '../core/typography';
-@use '../core/colors';
+@use "../core/typography";
+@use "../core/colors";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+  // overflow-x: hidden;
 }
 
+main {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header img {
+  height: 100%;
+  width: 100%;
+  //   overflow-x: hidden;
+}
+body {
+  background-color: colors.$bgcolor;
+
+  //   overflow: hidden;
+  //   height: 400vh;
+}
+#form-section1 {
+  border-bottom: 2px solid colors.$maincolor;
+  height: 40%;
+}
 h1 {
-    font-family: typography.$h1-font;
-    color: colors.$maincolor;
-    font-size: 3.5rem;
-    margin-top: 3rem;
-    text-align: center;
+  font-family: typography.$h1-font;
+  color: colors.$maincolor;
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 h2 {
-    font-family: typography.$h1-font;
-    color: colors.$maincolor;
-    font-size: 1.7rem;
-    margin-left: 2rem;
+  font-family: typography.$h1-font;
+  color: colors.$maincolor;
+  font-size: 1.7rem;
+  margin-left: 2rem;
 }
 
 .description {
-    font-family: typography.$p-font;
-    color: white;
-    margin: 2rem;
+  font-family: typography.$p-font;
+  color: white;
+  margin: 2rem;
 }
 
 #grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-    margin: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  margin: 4rem;
+  //   overflow-x: hidden;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  //   height: 100%;
+  //   overflow: hidden;
+}
+hr {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  width: 85%;
+  color: colors.$maincolor;
+  margin-bottom: 5vw;
+  margin-top: 5vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  opacity: 50%;
 }
 
 fieldset {
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    width: 32vw;
-    margin-bottom: 1.2rem;
-    height: 2.2em;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  width: 32vw;
+  margin-bottom: 1.2rem;
+  height: 2.2em;
 }
 
 .label-input {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
 }
 
 .password-eye {
-    display: flex;
+  display: flex;
 }
 
 i {
-    color: colors.$maincolor;
-    margin-left: -2em;
-    font-size: 1em;
-    z-index: 1;
-    align-self: center;
-    cursor: pointer;
+  color: colors.$maincolor;
+  margin-left: -2em;
+  font-size: 1em;
+  z-index: 1;
+  align-self: center;
+  cursor: pointer;
 }
 
 label {
-    font-family: typography.$h2-font;
-    color: colors.$maincolor;
-    font-size: 1.25rem;
-    display: block;
-    width: 12vw;
-    text-align: right;
+  font-family: typography.$h2-font;
+  color: colors.$maincolor;
+  font-size: 1.25rem;
+  display: block;
+  width: 12vw;
+  text-align: right;
 }
 
 .comment {
-    font-family: typography.$p-font;
-    color: gray;
-    font-size: 0.8rem;
-    display: block;
-    width: 12vw;
-    text-align: right;
+  font-family: typography.$p-font;
+  color: gray;
+  font-size: 0.8rem;
+  display: block;
+  width: 12vw;
+  text-align: right;
 }
 
 input {
-    background: transparent;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    width: 20rem;
-    height: 2.2rem;
-    font-family: typography.$p-font;
-    padding-left: 0.4rem;
-    color: white;
-    transition: all 0.2s ease;
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20rem;
+  height: 2.2rem;
+  font-family: typography.$p-font;
+  padding-left: 0.4rem;
+  color: white;
+  transition: all 0.2s ease;
 }
 
 input:is(:focus) {
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-radius: 1em;
-    outline: none;
-    color: white;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 1em;
+  outline: none;
+  color: white;
 }
 
 input::placeholder {
-    font-family: typography.$p-font;
-    color: rgb(255,255,255, 0.4);
+  font-family: typography.$p-font;
+  color: rgb(255, 255, 255, 0.4);
 }
-  
-input[type=file]::file-selector-button {
-    border: 2px solid colors.$maincolor;
-    border-radius: 1em;
-    background-color: colors.$bgcolor;
-    transition: 1s;
-    color: colors.$maincolor;
-    font-family: typography.$h1-font;
-    padding: 0.5vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    text-transform: uppercase;
+
+input[type="file"]::file-selector-button {
+  border: 2px solid colors.$maincolor;
+  border-radius: 1em;
+  background-color: colors.$bgcolor;
+  transition: 1s;
+  color: colors.$maincolor;
+  font-family: typography.$h1-font;
+  padding: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  text-transform: uppercase;
 }
-  
-input[type=file]::file-selector-button:hover {
-    background-color: colors.$maincolor;
-    border: 2px solid colors.$maincolor;
-    color: colors.$bgcolor;
-  }
-  
-input[type=file]:focus {
-      border: none;
+
+input[type="file"]::file-selector-button:hover {
+  background-color: colors.$maincolor;
+  border: 2px solid colors.$maincolor;
+  color: colors.$bgcolor;
+}
+
+input[type="file"]:focus {
+  border: none;
 }
 
 input:not(:focus, :placeholder-shown):invalid {
-    border: 2px solid red;
-    border-radius: 1em;
-    animation: shake 0.125s 2 backwards;
+  border: 2px solid red;
+  border-radius: 1em;
+  animation: shake 0.125s 2 backwards;
 }
 
 @keyframes shake {
-    25% {
-      transform: translateX(-6px);
-    }
-    75% {
-      transform: translateX(6px);
-    }
+  25% {
+    transform: translateX(-6px);
   }
-
-input[type=file]:not(:focus, :placeholder-shown):invalid {
-    border: none;
-    animation: none;
+  75% {
+    transform: translateX(6px);
+  }
 }
 
-.error1, .error2, .error3, .error4, .error5 {
-    visibility: hidden;
-    opacity: 0;
-    color: red;
-    font-family: typography.$p-font;
-    font-size: 0.7em;
-    text-align: end;
-    transition: opacity 0.3s;
+input[type="file"]:not(:focus, :placeholder-shown):invalid {
+  border: none;
+  animation: none;
+}
+
+.error1,
+.error2,
+.error3,
+.error4,
+.error5 {
+  visibility: hidden;
+  opacity: 0;
+  color: red;
+  font-family: typography.$p-font;
+  font-size: 0.7em;
+  text-align: end;
+  transition: opacity 0.3s;
 }
 
 .visible {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
-hr {
-    color: colors.$maincolor;
-    margin-bottom: 5vw;
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    opacity: 50%;
+// section 2
+
+#form-section2 label {
+  width: 50vw;
+  text-align: left;
+  padding-bottom: 1rem;
+  margin-left: -2rem;
+}
+#form-section2 {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin-top: 3vw;
+  border-bottom: 2px solid colors.$maincolor;
+  padding-bottom: 2vw;
+  height: 38%;
+}
+
+#form-section2 fieldset {
+  display: flex;
+  flex-direction: column;
+  min-height: 5vw;
+}
+#mySelect {
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20rem;
+  height: 2.2rem;
+  font-family: "Shapiro";
+  padding-left: 0.4rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+#mySelect2 {
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20rem;
+  height: 2.2rem;
+  font-family: "Shapiro";
+  padding-left: 0.4rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+#mySelect3 {
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20rem;
+  height: 2.2rem;
+  font-family: "Shapiro";
+  padding-left: 0.4rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+.top {
+  margin-top: 2rem;
+}
+.top2 {
+  margin-top: 4rem;
+}
+#form-section2 fieldset {
+  padding-left: 13vw;
+}
+option {
+  background-color: colors.$bgcolor;
+  padding: 2vw;
+  font-family: typography.$p-font;
+}
+.chosen button,
+.chosen2 button,
+.chosen3 button {
+  background-color: transparent;
+  color: colors.$maincolor;
+  padding: 0.5vw;
+  border-radius: 2rem;
+  margin-bottom: 1vw;
+  font-family: typography.$h1-font;
+  text-transform: uppercase;
+  border-color: colors.$maincolor;
+  border-style: solid;
+
+}
+.chosen, .chosen2, .chosen3{
+    width: 24vw;
+    
+}
+select {
+  opacity: 50%;
+}
+fieldset {
+  padding-top: 2vw;
+}
+
+//section 3
+
+#form-section3 {
+  grid-column-start: 2;
+  grid-row-start: 5;
+  margin-top: 3vw;
+}
+#alltexts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12vw;
+  //   align-items: center;
+  //   justify-content: center;
+}
+#text {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+#text2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  height: 20vw;
+}
+#text3 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  //   padding-top: 5vw;
+}
+
+.line2 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  grid-column-end: -1;
+  width: 85%;
+  margin-top: 13vw;
+}
+
+textarea {
+  margin-top: 2vw;
+  background: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20rem;
+  //   height: 2.2rem;
+  font-family: "Shapiro";
+  padding-left: 0.4rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+textarea:is(:focus) {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 1em;
+  outline: none;
+  color: white;
+}
+textarea::placeholder {
+  font-family: "Shapiro";
+  color: rgba(255, 255, 255, 0.4);
+}
+.textarea {
+  justify-content: start;
+}
+
+.submit {
+  font-family: typography.$h1-font;
+  color: colors.$btninit;
+  font-size: 1.5vw;
+  border-style: solid;
+  background: transparent;
+  border-color: colors.$btninit;
+  border-radius: 2rem;
+  padding: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in;
+  width: 15vw;
+  align-self: center;
+  margin-bottom: 5vw;
+  margin-top: 2vw;
+}
+
+.submit:hover {
+  background-color: colors.$btnhover;
+  color: colors.$bgcolor;
+  border-color: colors.$btnhover;
 }
